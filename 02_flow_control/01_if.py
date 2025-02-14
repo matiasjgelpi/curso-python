@@ -163,9 +163,16 @@ print(mensaje)
 # Ejercicio 2: Calculadora simple
 # Pide al usuario dos números y una operación (+, -, *, /)
 # Realiza la operación y muestra el resultado (maneja la división entre zero)
-n1 = input("Introduce el primer número?\n")
-n2 = input("Introduce el segundo número?\n")
-op = input("Introduce la operación (+, -, *, /)?\n")
+# n1 = input("Introduce el primer número?\n")
+# n2 = input("Introduce el segundo número?\n")
+# op = input("Introduce la operación (+, -, *, /)?\n")
+
+# if (int(n2) == 0 and op == "/"):
+#     print("No se puede dividir entre cero")
+#     exit()
+
+# result = eval(f"{n1} {op} {n2}")
+# print(f"El resultado de {n1} {op} {n2} es {result}")
 
 
 
@@ -174,6 +181,12 @@ op = input("Introduce la operación (+, -, *, /)?\n")
 # Ejercicio 3: Año bisiesto
 # Pide al usuario que introduzca un año y determina si es bisiesto.
 # Un año es bisiesto si es divisible por 4, excepto si es divisible por 100 pero no por 400.
+# año = int(input("Introduce un año?\n"))
+# if (año % 4 == 0  or (año % 100 == 0 and año % 400 != 0)):
+#     print("Es bisiesto")
+# else:
+#     print("No es bisiesto")
+
 
 # Ejercicio 4: Categorizar edades
 # Pide al usuario que introduzca una edad y la clasifique en:
@@ -182,3 +195,18 @@ op = input("Introduce la operación (+, -, *, /)?\n")
 # - Adolescente (13-17 años)
 # - Adulto (18-64 años)
 # - Adulto mayor (65 años o más)
+edad = int(input("Introduce una edad?\n"))
+categoria = ''
+
+if edad < 2:
+    categoria = "Bebé"
+elif edad < 13:
+    categoria = "Niño"
+elif edad < 17:
+    categoria = "Adolescente"
+elif edad < 65:
+    categoria = "Adulto"
+else:
+    categoria = "Adulto mayor"
+
+print(f"La edad {edad} es: {categoria}")
